@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function(){
+            // let element = document.getElementById("outerDiv");
+            // alert(element.innerHTML);
+
+            // let paragraphs = document.getElementsByTagName("p");
+            // alert(paragraphs.length);
+
+            // Fetches all elements that have the subPara class name.
+            // let paras = document.getElementsByClassName("subPara");
+            // alert("Elements with class subPara: " + paras.length);
+            
+            // Fetches all p elements.
+            // let allParas = document.querySelectorAll("p");
+            // alert(allParas.length);
+            
+            // Fetches the element that has the id outerDiv.
+            // let outerDiv = document.querySelector("#outerDiv");
+            // alert(outerDiv.innerHTML);
+            
+            // Fetches the first element that has the class mainPara.
+            // let mainPara = document.querySelector(".mainPara");
+            // alert(mainPara.innerHTML);
+            
+            // Removes the innerDiv element.
+            // let divElement = document.getElementById("innerDiv");
+            // document.removeChild(divElement);
+            // const afterRemove = document.getElementById("innerDiv");
+            // alert(afterRemove);
+            
+            // Appends the new article after the outerDiv.
+            // let bigDiv = document.getElementById("outerDiv");
+            // let newArticle = document.createElement("ARTICLE");
+            // newArticle.innerText = "My new article element";
+            // bigDiv.appendChild(newArticle);
+            
+            // Appends the new article after the outerDiv.
+            // var article = document.createElement("ARTICLE");
+            // article.innerHTML = 'This is a new ARTICLE';
+            // document.getElementById("outerDiv").appendChild(article);
+            
+            // Places the new article before the innerDiv.
+            // var element = document.getElementById("outerDiv").insertBefore(
+            //     document.createElement("article"),
+            //     document.getElementById("innerDiv")
+            // );
+            // element.innerText = "My new article element";
+            
+            // Puts the new article as the first child element inside the innerDiv.
+            // var inner = document.getElementById("innerDiv");
+            // var element = inner.insertBefore(document.createElement("article"), inner.firstChild);
+            // element.innerText = "My new article";
+
+            // Puts the new list item as the last child in the list.
+            // let list = document.getElementById("list");
+            // const newItem = list.insertBefore(document.createElement("li"), list.lastChild);
+            // newItem.innerText = "Another List Item";
+
+            // Remove an element using removeChild.
+            // var innerDiv = document.getElementById("innerDiv");
+            // var p = innerDiv.removeChild(document.getElementById("P1"));
+
+            // Remove an element using removeNode. This only works on Microsoft browsers!
+            // var innerDiv = document.getElementById("innerDiv");
+            // innerDiv.removeNode(true);
+
+            // Replace one element with another. This only works on Microsoft browsers!
+            // var innerDiv = document.getElementById("innerDiv");
+            // var newDiv = document.createElement("div");
+            // for (var i = 0; i < innerDiv.childNodes.length; i++){
+            //     var anchor = newDiv.appendChild(document.createElement("a"));
+            //     anchor.setAttribute("href", "www.google.com");
+            //     anchor.text = innerDiv.childNodes[i].textContent;
+            //     newDiv.appendChild(document.createElement("br"));
+            // }
+            // innerDiv.replaceNode(newDiv);
+        }
+    </script>
+    <title>JS Basics</title>
+</head>
+<body>
+    <div id="outerDiv">
+        <p class="mainPara">Main Paragraph</p>
+        <ul id="list">
+            <li>First List Item</li>
+            <li>Second List Item</li>
+            <li>Third List Item</li>
+            <li>Fourth List Item</li>
+        </ul>
+        <div id="innerDiv">
+            <p class="subPara" id="P1">Paragraph 1</p>
+            <p class="subPara" id="P2">Paragraph 2</p>
+            <p class="subPara" id="P3">Paragraph 3</p>
+            <p class="subPara" id="P4">Paragraph 4</p>
+        </div>
+        <table>
+            <tr><td>Row 1</td></tr>
+            <tr><td>Row 2</td></tr>
+            <tr><td>Row 3</td></tr>
+            <tr><td>Row 4</td></tr>
+            <tr><td>Row 5</td></tr>
+        </table>
+        <input type="text"/>
+        <input type="submit" value="Submit"/>
+    </div>
+</body>
+</html>
