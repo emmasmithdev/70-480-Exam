@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video and Audio</title>
+    <title>Video, Audio & Graphics</title>
     <style>
         img {
             height: 75px;
@@ -12,11 +12,123 @@
         img:hover {
             cursor: pointer;
         }
+        canvas {
+            border: 1px solid black;
+        }
     </style>
     <script>
         var video;
         window.onload = function(){
             video = document.getElementById("sampleVideo");
+            var drawingSurface = document.getElementById("drawingSurface");
+            var ctxt = drawingSurface.getContext("2d");
+
+            // Draws a zig-zag green line.
+            // ctxt.beginPath();
+            // ctxt.moveTo(10, 10);
+            // ctxt.lineTo(255, 250);
+            // ctxt.lineTo(200, 10);
+            // ctxt.lineTo(400, 250);
+            // ctxt.lineWidth = 5;
+            // ctxt.strokeStyle = "#0f0";
+            // ctxt.lineCap = "round";
+            // ctxt.stroke();
+
+            // Draws a green circle.
+            // ctxt.beginPath();
+            // ctxt.arc(150, 100, 75, 0, 2 * Math.PI, false);
+            // ctxt.lineWidth = 25;
+            // ctxt.strokeStyle = "#0f0";
+            // ctxt.fillStyle = "grey";
+            // ctxt.fill();
+            // ctxt.stroke();
+
+            // Draws a wee blue arc.
+            // ctxt.beginPath();
+            // ctxt.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false);
+            // ctxt.lineWidth = 25;
+            // ctxt.strokeStyle = "blue";
+            // ctxt.stroke();
+
+            // Draws a wee cyan arc.
+            // ctxt.beginPath();
+            // ctxt.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false);
+            // ctxt.lineWidth = 25;
+            // ctxt.strokeStyle = "#0ff";
+            // ctxt.stroke();
+
+            // Draws a wee red arc.
+            // ctxt.beginPath();
+            // ctxt.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false);
+            // ctxt.lineWidth = 25;
+            // ctxt.strokeStyle = "#f00";
+            // ctxt.stroke();
+
+            // Draws a quadratic curve with 1 control point.
+            // ctxt.beginPath();
+            // ctxt.moveTo(10, 380);
+            // ctxt.quadraticCurveTo(300, -250, 580, 380); // Negative value means a steeper curve.
+            // ctxt.lineWidth = 25;
+            // ctxt.strokeStyle = "#f00";
+            // ctxt.stroke();
+
+            // Draws a squiggly line with 2 control points.
+            // ctxt.beginPath();
+            // ctxt.moveTo(125, 20);
+            // ctxt.bezierCurveTo(0, 200, 300, 300, 50, 400);
+            // ctxt.lineWidth = 5;
+            // ctxt.strokeStyle = "#f00";
+            // ctxt.stroke();
+
+            // Draws a more complex shape.
+            // ctxt.beginPath();
+            // ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            // ctxt.lineTo(150, 125);
+            // ctxt.quadraticCurveTo(300, 0, 450, 125);
+            // ctxt.lineTo(353, 144);
+            // ctxt.strokeStyle = "lightblue";
+            // ctxt.lineCap = "round";
+            // ctxt.lineWidth = 10;
+            // ctxt.fillStyle = "pink";
+            // ctxt.fill();
+            // ctxt.stroke();
+
+            // Draws a rectangle.
+            // ctxt.beginPath();
+            // ctxt.rect(300, 200, 150, 75);
+            // ctxt.strokeStyle = "teal";
+            // ctxt.fillStyle = "teal";
+            // ctxt.fill();
+            // ctxt.stroke();
+
+            // Draws and fills a rectangle in one call.
+            // ctxt.fillStyle = "purple";
+            // ctxt.fillRect(20, 350, 400, 30);
+
+            // Creates a rectangle gradient.
+            // ctxt.lineWidth = 3;
+            // ctxt.rect(150, 150, 200, 125);
+            // var gradient = ctxt.createLinearGradient(150, 150, 200, 125);
+            // gradient.addColorStop(0, "Black");
+            // gradient.addColorStop(0.5, "Grey");
+            // gradient.addColorStop(1, "White");
+            // ctxt.fillStyle = gradient;
+            // ctxt.fill();
+            // ctxt.stroke();
+
+            // Creates a radial gradient.
+            // ctxt.lineWidth = 3;
+            // ctxt.rect(150, 150, 250, 175);
+            // var gradient = ctxt.createRadialGradient(200, 200, 5, 250, 250, 100);
+            // gradient.addColorStop(0, "Red");
+            // gradient.addColorStop(.5, "orange");
+            // gradient.addColorStop(1, "blue");
+            // ctxt.fillStyle = gradient;
+            // ctxt.fill();
+            // ctxt.stroke();
+
+            
+
         }
         function play(){
             video.play();
@@ -43,6 +155,16 @@
                 <img id="playButton" onclick="play()" src="data:image/png;base64,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">
                 <br>
                 <img id="pauseButton" onclick="pause()" src="https://image.flaticon.com/icons/svg/61/61039.svg">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <audio controls src="http://www.hochmuth.com/mp3/Tchaikovsky_Rococo_Var_orch.mp3"></audio>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <canvas id="drawingSurface" width="600" height="400">Your browser does not support HTML5</canvas>
             </td>
         </tr>
     </table>
